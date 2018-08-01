@@ -1,5 +1,5 @@
 function fizzbuzz(number) {
-	if (number < 1 || number === undefined || typeof number !== 'number' || number > 100) {
+	if (number < 1 || number === undefined || typeof number !== 'number' || typeof number !== 'number' || number > 100 || isNaN(number)) {
 		throw new Error('Invalid argument');
 	}
 

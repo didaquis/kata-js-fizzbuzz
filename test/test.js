@@ -9,6 +9,10 @@ describe('Testing FizzBuzz', () => {
 		expect( () => { fizzbuzz('foo'); } ).toThrow();
 		expect( () => { fizzbuzz({}); } ).toThrow();
 		expect( () => { fizzbuzz([]); } ).toThrow();
+		expect( () => { fizzbuzz(null); } ).toThrow();
+		expect( () => { fizzbuzz(undefined); } ).toThrow();
+		expect( () => { fizzbuzz(NaN); } ).toThrow();
+		expect( () => { fizzbuzz(() => {}); } ).toThrow();
 	});
 
 	test('Should return number 1', () => {
@@ -23,6 +27,12 @@ describe('Testing FizzBuzz', () => {
 		expect(typeof fizzbuzz(2)).toEqual('number');
 	});
 
+	test('Should return number 77', () => {
+		expect(fizzbuzz(77)).toBe(77);
+		expect(fizzbuzz(77)).toEqual(77);
+		expect(typeof fizzbuzz(77)).toEqual('number');
+	});
+
 	test('Should return Fizz', () => {
 		expect(fizzbuzz(3)).toBe('Fizz');
 		expect(fizzbuzz(3)).toEqual('Fizz');
@@ -31,6 +41,14 @@ describe('Testing FizzBuzz', () => {
 		expect(fizzbuzz(6)).toBe('Fizz');
 		expect(fizzbuzz(6)).toEqual('Fizz');
 		expect(typeof fizzbuzz(6)).toEqual('string');
+
+		expect(fizzbuzz(9)).toBe('Fizz');
+		expect(fizzbuzz(9)).toEqual('Fizz');
+		expect(typeof fizzbuzz(9)).toEqual('string');
+
+		expect(fizzbuzz(66)).toBe('Fizz');
+		expect(fizzbuzz(66)).toEqual('Fizz');
+		expect(typeof fizzbuzz(66)).toEqual('string');
 	});
 
 	test('Should return Buzz', () => {
@@ -41,6 +59,36 @@ describe('Testing FizzBuzz', () => {
 		expect(fizzbuzz(10)).toBe('Buzz');
 		expect(fizzbuzz(10)).toEqual('Buzz');
 		expect(typeof fizzbuzz(10)).toEqual('string');
+
+		expect(fizzbuzz(20)).toBe('Buzz');
+		expect(fizzbuzz(20)).toEqual('Buzz');
+		expect(typeof fizzbuzz(20)).toEqual('string');
+
+		expect(fizzbuzz(80)).toBe('Buzz');
+		expect(fizzbuzz(80)).toEqual('Buzz');
+		expect(typeof fizzbuzz(80)).toEqual('string');
+
+		expect(fizzbuzz(100)).toBe('Buzz');
+		expect(fizzbuzz(100)).toEqual('Buzz');
+		expect(typeof fizzbuzz(100)).toEqual('string');
+	});
+
+	test('Should return FizzBuzz', () => {
+		expect(fizzbuzz(15)).toBe('FizzBuzz');
+		expect(fizzbuzz(15)).toEqual('FizzBuzz');
+		expect(typeof fizzbuzz(15)).toEqual('string');
+
+		expect(fizzbuzz(30)).toBe('FizzBuzz');
+		expect(fizzbuzz(30)).toEqual('FizzBuzz');
+		expect(typeof fizzbuzz(30)).toEqual('string');
+
+		expect(fizzbuzz(60)).toBe('FizzBuzz');
+		expect(fizzbuzz(60)).toEqual('FizzBuzz');
+		expect(typeof fizzbuzz(60)).toEqual('string');
+
+		expect(fizzbuzz(90)).toBe('FizzBuzz');
+		expect(fizzbuzz(90)).toEqual('FizzBuzz');
+		expect(typeof fizzbuzz(90)).toEqual('string');
 	});
 
 });
