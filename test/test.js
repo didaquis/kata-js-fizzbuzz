@@ -2,9 +2,14 @@ const fizzbuzz = require('../src/fizzbuzz.js');
 
 describe('Testing FizzBuzz', () => {
 
-	test('Should throw error', () => {
+	test('should be a valid function', () => {
+		expect(typeof fizzbuzz).toEqual('function');
+	});
+
+	test('Should throw errorif argument is not valid', () => {
 		expect( () => { fizzbuzz(0); } ).toThrow();
 		expect( () => { fizzbuzz(101); } ).toThrow();
+		expect( () => { fizzbuzz(-5); } ).toThrow();
 		expect( () => { fizzbuzz(); } ).toThrow();
 		expect( () => { fizzbuzz('foo'); } ).toThrow();
 		expect( () => { fizzbuzz({}); } ).toThrow();
@@ -13,6 +18,10 @@ describe('Testing FizzBuzz', () => {
 		expect( () => { fizzbuzz(undefined); } ).toThrow();
 		expect( () => { fizzbuzz(NaN); } ).toThrow();
 		expect( () => { fizzbuzz(() => {}); } ).toThrow();
+	});
+
+	test('Should throw error with detailed error text', () => {
+		expect( () => { fizzbuzz(); } ).toThrow('Invalid argument');
 	});
 
 	test('Should return number 1', () => {
