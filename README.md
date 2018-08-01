@@ -1,12 +1,12 @@
-Javascript-FizzBuzz-Kata
+JavaScript-FizzBuzz-Kata
 ========================
 
-Return “fizz”, “buzz” or “fizzbuzz”.
+Return “Fizz”, “Buzz” or “FizzBuzz”.
 
-For a given natural number greater than zero return:
-- “fizz” if the number is divisible by 3
-- “buzz” if the number is divisible by 5
-- “fizzbuzz” if the number is divisible by 15
+For a given natural number greater than zero and lower than one houndred one return:
+- “Fizz” if the number is divisible by 3
+- “Buzz” if the number is divisible by 5
+- “FizzBuzz” if the number is divisible by 15
 - the same number if no other requirement is fulfilled
 
 
@@ -34,3 +34,8 @@ Fizz
 Buzz
 ... etc up to 100
 ```
+
+## Run code:
+Install dependencies: `npm run install`.  
+
+Run the test: `npm run test`.  
