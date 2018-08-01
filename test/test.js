@@ -23,4 +23,24 @@ describe('Testing FizzBuzz', () => {
 		expect(typeof fizzbuzz(2)).toEqual('number');
 	});
 
+	test('Should return Fizz', () => {
+		expect(fizzbuzz(3)).toBe('Fizz');
+		expect(fizzbuzz(3)).toEqual('Fizz');
+		expect(typeof fizzbuzz(3)).toEqual('string');
+
+		expect(fizzbuzz(6)).toBe('Fizz');
+		expect(fizzbuzz(6)).toEqual('Fizz');
+		expect(typeof fizzbuzz(6)).toEqual('string');
+	});
+
+	test('Should return Buzz', () => {
+		expect(fizzbuzz(5)).toBe('Buzz');
+		expect(fizzbuzz(5)).toEqual('Buzz');
+		expect(typeof fizzbuzz(5)).toEqual('string');
+
+		expect(fizzbuzz(10)).toBe('Buzz');
+		expect(fizzbuzz(10)).toEqual('Buzz');
+		expect(typeof fizzbuzz(10)).toEqual('string');
+	});
+
 });
