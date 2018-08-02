@@ -2,7 +2,7 @@ const fizzbuzz = require('../src/fizzbuzz.js');
 
 describe('Testing FizzBuzz', () => {
 
-	test('should be a valid function', () => {
+	test('Should be a valid function', () => {
 		expect(typeof fizzbuzz).toEqual('function');
 	});
 
@@ -40,6 +40,30 @@ describe('Testing FizzBuzz', () => {
 		expect(fizzbuzz(77)).toBe(77);
 		expect(fizzbuzz(77)).toEqual(77);
 		expect(typeof fizzbuzz(77)).toEqual('number');
+	});
+
+	test('Should return number', () => {
+		expect(typeof fizzbuzz(4)).toEqual('number');
+		expect(typeof fizzbuzz(7)).toEqual('number');
+		expect(typeof fizzbuzz(8)).toEqual('number');
+		expect(typeof fizzbuzz(11)).toEqual('number');
+		expect(typeof fizzbuzz(13)).toEqual('number');
+		expect(typeof fizzbuzz(14)).toEqual('number');
+		expect(typeof fizzbuzz(16)).toEqual('number');
+		expect(typeof fizzbuzz(17)).toEqual('number');
+		expect(typeof fizzbuzz(19)).toEqual('number');
+	});
+
+	test('Should return text', () =>{
+		expect(typeof fizzbuzz(3)).toEqual('string');
+		expect(typeof fizzbuzz(5)).toEqual('string');
+		expect(typeof fizzbuzz(6)).toEqual('string');
+		expect(typeof fizzbuzz(9)).toEqual('string');
+		expect(typeof fizzbuzz(10)).toEqual('string');
+		expect(typeof fizzbuzz(12)).toEqual('string');
+		expect(typeof fizzbuzz(15)).toEqual('string');
+		expect(typeof fizzbuzz(18)).toEqual('string');
+		expect(typeof fizzbuzz(20)).toEqual('string');
 	});
 
 	test('Should return Fizz', () => {
