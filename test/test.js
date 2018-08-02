@@ -6,7 +6,7 @@ describe('Testing FizzBuzz', () => {
 		expect(typeof fizzbuzz).toEqual('function');
 	});
 
-	test('Should throw errorif argument is not valid', () => {
+	test('Should throw error if argument is not valid', () => {
 		expect( () => { fizzbuzz(0); } ).toThrow();
 		expect( () => { fizzbuzz(101); } ).toThrow();
 		expect( () => { fizzbuzz(-5); } ).toThrow();
@@ -21,7 +21,17 @@ describe('Testing FizzBuzz', () => {
 	});
 
 	test('Should throw error with detailed error text', () => {
+		expect( () => { fizzbuzz(0); } ).toThrow('Invalid argument');
+		expect( () => { fizzbuzz(101); } ).toThrow('Invalid argument');
+		expect( () => { fizzbuzz(-5); } ).toThrow('Invalid argument');
 		expect( () => { fizzbuzz(); } ).toThrow('Invalid argument');
+		expect( () => { fizzbuzz('foo'); } ).toThrow('Invalid argument');
+		expect( () => { fizzbuzz({}); } ).toThrow('Invalid argument');
+		expect( () => { fizzbuzz([]); } ).toThrow('Invalid argument');
+		expect( () => { fizzbuzz(null); } ).toThrow('Invalid argument');
+		expect( () => { fizzbuzz(undefined); } ).toThrow('Invalid argument');
+		expect( () => { fizzbuzz(NaN); } ).toThrow('Invalid argument');
+		expect( () => { fizzbuzz(() => {}); } ).toThrow('Invalid argument');
 	});
 
 	test('Should return number 1', () => {
