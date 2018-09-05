@@ -1,17 +1,32 @@
 function fizzbuzz(number) {
-	if (number < 1 || number === undefined || typeof number !== 'number' || number > 100 || isNaN(number)) {
+	if (!isIntegerBetweenOneAndOneHundred(number)) {
 		throw new Error('Invalid argument');
 	}
 
-	if (number % 3 === 0 && number % 5 === 0) {
+	if (isMultiple(number, 3) && isMultiple(number, 5)) {
 		return 'FizzBuzz';
-	} else if (number % 3 === 0) {
+	} else if (isMultiple(number, 3)) {
 		return 'Fizz';
-	} else if (number % 5 === 0) {
+	} else if (isMultiple(number, 5)) {
 		return 'Buzz';
 	}
 
 	return number;
+}
+
+
+function isIntegerBetweenOneAndOneHundred(number) {
+	if (number < 1 || number === undefined || typeof number !== 'number' || number > 100 || isNaN(number)) {
+		return false;
+	}
+	return true;
+}
+
+function isMultiple(number,multiple) {
+	if (number % multiple === 0) {
+		return true;
+	}
+	return false;
 }
 
 module.exports = fizzbuzz;
