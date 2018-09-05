@@ -1,10 +1,11 @@
 {
   "name": "kata-js-fizzbuzz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JavaScript Kata FizzBuzz",
   "main": "src/fizzbuzz.js",
   "scripts": {
-    "test": "jest --config test/jest.config.js"
+    "test": "jest --config test/jest.config.js",
+    "test:watch": "jest --config test/jest.config.js --watchAll"
   },
   "keywords": [
     "JavaScript",
