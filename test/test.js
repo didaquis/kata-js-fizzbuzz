@@ -64,7 +64,7 @@ describe('Testing FizzBuzz', () => {
 		expect(typeof fizzbuzz(19)).toEqual('number');
 	});
 
-	test('Should return text', () =>{
+	test('Should return text', () => {
 		expect(typeof fizzbuzz(3)).toEqual('string');
 		expect(typeof fizzbuzz(5)).toEqual('string');
 		expect(typeof fizzbuzz(6)).toEqual('string');

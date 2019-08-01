@@ -1,4 +1,4 @@
-function fizzbuzz(number) {
+function fizzbuzz (number) {
 	if (!isIntegerBetweenOneAndOneHundred(number)) {
 		throw new Error('Invalid argument');
 	}
@@ -15,14 +15,14 @@ function fizzbuzz(number) {
 }
 
 
-function isIntegerBetweenOneAndOneHundred(number) {
+function isIntegerBetweenOneAndOneHundred (number) {
 	if (number < 1 || number === undefined || typeof number !== 'number' || number > 100 || isNaN(number)) {
 		return false;
 	}
 	return true;
 }
 
-function isMultiple(number,multiple) {
+function isMultiple (number, multiple) {
 	if (number % multiple === 0) {
 		return true;
 	}
